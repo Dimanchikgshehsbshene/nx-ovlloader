@@ -56,15 +56,20 @@ The easiest way to install nx-ovlloader is through the complete [Ultrahand Overl
 sdmc:/
 ├── atmosphere/
 │   └── contents/
-│       └── 420000000007E51A/       ← nx-ovlloader sysmodule (Title ID)
-│           ├── exefs.nsp           ← compiled sysmodule binary
-│           ├── toolbox.json        ← sysmodule metadata
-│           └── flags/
-│               └── boot2.flag      ← enables auto-start at boot
-└── config/
-    └── nx-ovlloader/
-        ├── heap_size.bin           ← persistent heap size override (4 / 6 / 8 MB); written by Ultrahand
-        └── exit_flag.bin           ← runtime exit signal (transient; consumed and deleted on next load)
+│       ├── 420000000007E51A/       ← nx-ovlloader sysmodule (Title ID)
+│       │   ├── exefs.nsp           ← compiled sysmodule binary
+│       │   ├── toolbox.json        ← sysmodule metadata
+│       │   └── flags/
+│       │       └── boot2.flag      ← enables auto-start at boot
+│       └── 420000000007E51B/       ← nx-ovlreloader sysmodule (for on-demand reloads)
+│           └── exefs.nsp
+├── config/
+│   └── nx-ovlloader/
+│       ├── heap_size.bin           ← persistent heap size override (4 / 6 / 8 MB); written by Ultrahand
+│       └── exit_flag.bin           ← runtime exit signal (transient; consumed and deleted on next load)
+└── switch/
+    └── Ultrahand-Reload/
+        └── Ultrahand-Reload.nro    ← respawn nx-ovlloader on-demand from the hbmenu
 ```
 
 ---
@@ -119,7 +124,8 @@ Contributions are welcome. Please open an [issue](https://github.com/ppkantorski
 
 ## License
 
-Copyright © 2017–2018 nx-hbloader Authors  
+Copyright © 2017–2018 nx-hbloader Authors
+Copyright © 2020–2023 WerWolv
 Copyright © 2023–2026 ppkantorski
 
 Licensed under the [ISC License](LICENSE.md).
