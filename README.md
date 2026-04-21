@@ -83,19 +83,21 @@ sdmc:/
 ### 1. Clone
 
 ```sh
-git clone https://github.com/ppkantorski/nx-ovlloader
+git clone --recurse-submodules https://github.com/ppkantorski/nx-ovlloader.git
 cd nx-ovlloader
-```
-
-If you want to build the complete package including [nx-ovlreloader](https://github.com/ppkantorski/nx-ovlreloader), also clone it into `external/nx-ovlreloader`:
-
-```sh
-git clone https://github.com/ppkantorski/nx-ovlreloader external/nx-ovlreloader
 ```
 
 ### 2. Build
 
 ```sh
+export DEVKITPRO=/opt/devkitpro
+make
+```
+
+If you want to build the complete package including [nx-ovlreloader](https://github.com/ppkantorski/nx-ovlreloader), also clone it into `external/nx-ovlreloader`:
+
+```sh
+cd external/nx-ovlreloader
 export DEVKITPRO=/opt/devkitpro
 make
 ```
