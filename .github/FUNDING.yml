@@ -1,5 +1,14 @@
-# These are supported funding model platforms
+################################################################################
+# FUNDING.yml for Ultrahand-Overlay Repository
+# Author: ppkantorski
+# Description:
+#   This FUNDING.yml file is used to configure the sponsor button for the Ultrahand Overlay
+#   repository on GitHub. It specifies the supported funding model platforms and their
+#   respective account information.
+#
+#   GitHub Repository: https://github.com/ppkantorski/Ultrahand-Overlay
+#
+################################################################################
 
-patreon: werwolv
-custom: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KP7XRJAND9KWU&source=url
-github: WerWolv
+github: ppkantorski
+ko_fi: ppkantorski
