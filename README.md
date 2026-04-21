@@ -127,7 +127,9 @@ Contributions are welcome. Please open an [issue](https://github.com/ppkantorski
 ## License
 
 Copyright © 2017–2018 nx-hbloader Authors
+
 Copyright © 2020–2023 WerWolv
+
 Copyright © 2023–2026 ppkantorski
 
 Licensed under the [ISC License](LICENSE.md).
