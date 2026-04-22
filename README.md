@@ -39,11 +39,9 @@ The easiest way to install nx-ovlloader is through the complete [Ultrahand Overl
 
 ### Manual Install
 
-1. Download the latest release from [Releases](https://github.com/ppkantorski/nx-ovlloader/releases/latest).
-2. Copy the contents to your SD card:
-   - `exefs.nsp` → `/atmosphere/contents/420000000007E51A/exefs.nsp`
-   - `toolbox.json` → `/atmosphere/contents/420000000007E51A/toolbox.json`
-   - Create an empty file at `/atmosphere/contents/420000000007E51A/flags/boot2.flag`
+1. Download the latest release zip from [Releases](https://github.com/ppkantorski/nx-ovlloader/releases/latest) and extract it to the root of your SD card.
+    - This archive includes the correct directory structure for both nx-ovlloader and nx-ovlreloader.
+2. Place an overlay menu at `/switch/.overlays/ovlmenu.ovl` — either [Ultrahand Overlay](https://github.com/ppkantorski/Ultrahand-Overlay) or Tesla Menu.
 3. Reboot your Switch. nx-ovlloader will start automatically with Atmosphère and chainload `ovlmenu.ovl`.
 
 > **Note:** nx-ovlloader requires [Atmosphère](https://github.com/Atmosphere-NX/Atmosphere) and HOS 9.0.0 or later.
