@@ -118,7 +118,7 @@ This creates `nx-ovlloader.zip` from the contents of `out/`.
 
 Contributions are welcome. Please open an [issue](https://github.com/ppkantorski/nx-ovlloader/issues/new) or submit a [pull request](https://github.com/ppkantorski/nx-ovlloader/compare).
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X3VR194)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X3VR194) [![sponsor](https://github.com/ppkantorski/ppkantorski/raw/refs/heads/main/.pics/sponsor-icon.png)](https://github.com/sponsors/ppkantorski)
 
 ---
 
