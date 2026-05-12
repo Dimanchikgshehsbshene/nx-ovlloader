@@ -15,7 +15,7 @@ BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
-APP_VERSION	:=	2.0.0
+APP_VERSION	:=	2.0.1
 
 # Path to nx-ovlreloader
 RELOADER_DIR := external/nx-ovlreloader
