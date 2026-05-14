@@ -22,7 +22,14 @@ nroEntrypointTrampoline:
     mov  sp, x8
     bl   checkExitRequested
     cbnz w0, __exit_requested
-    
+
+    // Check if a manual reload was requested (flag file - same effect as heap change)
+    adrp x8, __stack_top
+    ldr  x8, [x8, #:lo12:__stack_top]
+    mov  sp, x8
+    bl   checkReloadRequested
+    cbnz w0, __exit_for_heap_change
+
     // Check if heap size changed (fast check between overlays)
     adrp x8, __stack_top
     ldr  x8, [x8, #:lo12:__stack_top]
