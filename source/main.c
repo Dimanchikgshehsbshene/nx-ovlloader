@@ -7,7 +7,8 @@
 
 #define DEFAULT_NRO "sdmc:/switch/.overlays/ovlmenu.ovl"
 #define HEAP_CONFIG_PATH "/config/nx-ovlloader/heap_size.bin"
-#define EXIT_FLAG_PATH "/config/nx-ovlloader/exit_flag.bin"
+#define EXIT_FLAG_PATH   "/config/nx-ovlloader/exit_flag.bin"
+#define RELOAD_FLAG_PATH "/config/nx-ovlloader/reload_flag.bin"
 
 const char g_noticeText[] =
     "nx-ovlloader " VERSION "\0"
@@ -285,6 +286,28 @@ bool checkExitRequested(void) {
     fsFsDeleteFile(&g_sdmc, EXIT_FLAG_PATH);
     
     return true; // Exit requested!
+}
+
+// Reload flag check - called from trampoline between overlays
+// Returns true if a manual reload was requested (spawns nx-ovlreloader, same as heap change)
+bool checkReloadRequested(void) {
+    if (!g_sdmc_initialized) {
+        Result rc = fsOpenSdCardFileSystem(&g_sdmc);
+        if (R_FAILED(rc)) return false;
+        g_sdmc_initialized = true;
+    }
+
+    FsFile fd;
+    Result rc = fsFsOpenFile(&g_sdmc, RELOAD_FLAG_PATH, FsOpenMode_Read, &fd);
+    if (R_FAILED(rc)) {
+        return false; // No flag file = no reload
+    }
+
+    // Flag exists - delete it and signal reload
+    fsFileClose(&fd);
+    fsFsDeleteFile(&g_sdmc, RELOAD_FLAG_PATH);
+
+    return true; // Reload requested!
 }
 
 // Fast heap change check - called from trampoline between overlays
