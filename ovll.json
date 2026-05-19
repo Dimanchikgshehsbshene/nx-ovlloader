@@ -185,6 +185,24 @@
 				"size": "0x00001000",
 				"is_io": true
 			}
+		},
+		{
+			"type": "map",
+			"value": {
+				"address": "0x6000C000",
+				"is_ro": false,
+				"size": "0x00001000",
+				"is_io": true
+			}
+		},
+		{
+			"type": "map",
+			"value": {
+				"address": "0x60006000",
+				"is_ro": false,
+				"size": "0x00001000",
+				"is_io": true
+			}
 		}
 	]
 }
