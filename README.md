@@ -32,7 +32,7 @@ Core-загрузчик sysmodule для Tesla-совместимых overlay-м
 ## Сборка из исходников
 
 ```sh
-git clone https://github.com/Dimanchikgshehsbshene/nx-ovlloader.git
+git clone https://github.com/Dimasick-git/nx-ovlloader.git
 cd nx-ovlloader
 export DEVKITPRO=/opt/devkitpro
 make
